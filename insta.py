@@ -6,8 +6,10 @@ from emoji import UNICODE_EMOJI
 
 # Rest of your code goes here
 
-session = InstaPy(username='shoely.npl', password='S1h2o3e4l5y6##',)
+session = InstaPy(username='shoely.npl',
+                  password='S1h2o3e4l5y6##', want_check_browser=False)
 session.login()
 session.set_relationship_bounds(min_followers=10, max_followers=20)
-session.follow_user_followers(['shoesmanduofficial'], amount=15, sleep_delay=7)
+session.follow_user_followers(
+    ['shoesmanduofficial'], amount=15, sleep_delay=60)
 session.end()
